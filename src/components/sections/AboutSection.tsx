@@ -29,7 +29,7 @@ export function AboutSection() {
 
           {/* Content */}
           <div className="space-y-6">
-            <div>
+            <div className="text-center lg:text-left">
               <span className="text-sm font-semibold uppercase tracking-wider text-ocean-500 dark:text-ocean-400">
                 About WatersLab
               </span>

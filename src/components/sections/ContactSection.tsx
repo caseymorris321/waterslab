@@ -41,7 +41,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left - Contact Info */}
           <div className="space-y-8">
-            <div>
+            <div className="text-center lg:text-left">
               <span className="text-sm font-semibold uppercase tracking-wider text-ocean-500">
                 Contact Us
               </span>
