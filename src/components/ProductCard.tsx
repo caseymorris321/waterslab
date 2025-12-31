@@ -143,7 +143,8 @@ export function ProductCard({ product }: { product: ProductSelect }) {
         <CardFooter className="pt-4 flex items-center justify-between border-t border-slate-100 dark:border-sky-400/10 mt-4">
           <span className="text-xl font-bold text-navy-900 dark:text-sky-100">${product.price}</span>
           <Button
-            className="bg-ocean-500 hover:bg-ocean-600 text-white shadow-sm hover:shadow-md transition-all cursor-pointer px-5 py-2"
+            size="lg"
+            className="bg-ocean-500 hover:bg-ocean-600 text-white shadow-sm hover:shadow-md transition-all cursor-pointer px-6 py-3 text-base"
             onClick={async (e) => {
               e.preventDefault()
               e.stopPropagation()
