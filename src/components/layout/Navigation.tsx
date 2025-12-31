@@ -157,7 +157,7 @@ export function Navigation() {
           </Link>
         </div>
 
-        {/* Mobile - Menu Button + Theme Toggle (Left) */}
+        {/* Mobile - Menu Button + Saved + Theme Toggle (Left) */}
         <div className="flex md:hidden items-center gap-1">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -170,6 +170,20 @@ export function Navigation() {
               <Menu size={20} className="text-navy-800 dark:text-sky-100" />
             )}
           </button>
+          <Link
+            to="/saved-products"
+            className={cn(
+              'relative p-2 rounded-full transition-all',
+              'text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10',
+            )}
+          >
+            <Heart size={18} className={savedCount > 0 ? 'fill-current' : ''} />
+            {savedCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center w-4 h-4 rounded-full bg-red-500 text-[10px] font-bold text-white">
+                {savedCount > 9 ? '9+' : savedCount}
+              </span>
+            )}
+          </Link>
           <ThemeToggle />
         </div>
 
