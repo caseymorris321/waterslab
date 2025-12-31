@@ -11,6 +11,7 @@ export function HeroOcean() {
     if (!containerRef.current) return
 
     const container = containerRef.current
+    const isMobile = container.clientWidth < 768
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
@@ -25,14 +26,14 @@ export function HeroOcean() {
     // Scene
     const scene = new THREE.Scene()
 
-    // Camera
+    // Camera - wider FOV and centered on mobile
     const camera = new THREE.PerspectiveCamera(
-      55,
+      isMobile ? 70 : 55,
       container.clientWidth / container.clientHeight,
       1,
       20000
     )
-    camera.position.set(30, 30, 100)
+    camera.position.set(isMobile ? 0 : 30, 30, 100)
 
     // Sun
     const sun = new THREE.Vector3()
@@ -68,11 +69,9 @@ export function HeroOcean() {
     skyUniforms['mieCoefficient'].value = 0.005
     skyUniforms['mieDirectionalG'].value = 0.8
 
-    // Move sun slightly left on mobile
-    const isMobile = container.clientWidth < 768
     const parameters = {
-      elevation: 3,
-      azimuth: isMobile ? 170 : 180,
+      elevation: 2,
+      azimuth: isMobile ? 167 : 180,
     }
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer)
