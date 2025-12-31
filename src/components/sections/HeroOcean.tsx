@@ -70,7 +70,7 @@ export function HeroOcean() {
     skyUniforms['mieDirectionalG'].value = 0.8
 
     const parameters = {
-      elevation: 4.5,
+      elevation: 6,
       azimuth: 180,
     }
 
