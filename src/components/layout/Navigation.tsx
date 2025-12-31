@@ -157,18 +157,21 @@ export function Navigation() {
           </Link>
         </div>
 
-        {/* Mobile - Menu Button (Left) */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-sky-50 dark:hover:bg-navy-800 transition-colors cursor-pointer"
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <X size={20} className="text-navy-800 dark:text-sky-100" />
-          ) : (
-            <Menu size={20} className="text-navy-800 dark:text-sky-100" />
-          )}
-        </button>
+        {/* Mobile - Menu Button + Theme Toggle (Left) */}
+        <div className="flex md:hidden items-center gap-1">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-lg hover:bg-sky-50 dark:hover:bg-navy-800 transition-colors cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X size={20} className="text-navy-800 dark:text-sky-100" />
+            ) : (
+              <Menu size={20} className="text-navy-800 dark:text-sky-100" />
+            )}
+          </button>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile - Cart (Right) */}
         <Link
@@ -246,39 +249,31 @@ export function Navigation() {
                   />
                   Saved{savedCount > 0 ? ` (${savedCount})` : ''}
                 </Link>
-                <div className="px-4 py-2 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <UserButton
-                      afterSignOutUrl="/"
-                      appearance={{
-                        elements: {
-                          avatarBox: 'w-9 h-9',
-                        },
-                      }}
-                    />
-                    <span className="text-sm text-slate-500 dark:text-sky-300">Manage account</span>
-                  </div>
-                  <ThemeToggle />
+                <div className="px-4 py-2 flex items-center gap-3">
+                  <UserButton
+                    afterSignOutUrl="/"
+                    appearance={{
+                      elements: {
+                        avatarBox: 'w-9 h-9',
+                      },
+                    }}
+                  />
+                  <span className="text-sm text-slate-500 dark:text-sky-300">Manage account</span>
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col gap-3">
-                <SignInButton mode="modal">
-                  <button
-                    className={cn(
-                      'flex items-center justify-center gap-2 w-full',
-                      'px-4 py-3 rounded-xl',
-                      'bg-ocean-500 text-white font-semibold',
-                      'hover:bg-ocean-600 transition-colors cursor-pointer',
-                    )}
-                  >
-                    Sign In
-                  </button>
-                </SignInButton>
-                <div className="flex justify-center">
-                  <ThemeToggle />
-                </div>
-              </div>
+              <SignInButton mode="modal">
+                <button
+                  className={cn(
+                    'flex items-center justify-center gap-2 w-full',
+                    'px-4 py-3 rounded-xl',
+                    'bg-ocean-500 text-white font-semibold',
+                    'hover:bg-ocean-600 transition-colors cursor-pointer',
+                  )}
+                >
+                  Sign In
+                </button>
+              </SignInButton>
             )}
           </div>
         </div>
