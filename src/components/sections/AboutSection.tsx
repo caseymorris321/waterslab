@@ -62,21 +62,23 @@ export function AboutSection() {
             </ul>
 
             {/* CTA */}
-            <Link
-              to="/store"
-              className={cn(
-                'inline-flex items-center gap-2',
-                'px-6 py-3 rounded-full',
-                'bg-ocean-500 hover:bg-ocean-600',
-                'text-white font-semibold',
-                'shadow-lg shadow-ocean-500/25',
-                'hover:-translate-y-0.5 hover:shadow-xl',
-                'transition-all duration-200',
-              )}
-            >
-              Explore Store
-              <ArrowRight size={18} />
-            </Link>
+            <div className="flex justify-center md:justify-start">
+              <Link
+                to="/store"
+                className={cn(
+                  'inline-flex items-center gap-2',
+                  'px-6 py-3 rounded-full',
+                  'bg-ocean-500 hover:bg-ocean-600',
+                  'text-white font-semibold',
+                  'shadow-lg shadow-ocean-500/25',
+                  'hover:-translate-y-0.5 hover:shadow-xl',
+                  'transition-all duration-200',
+                )}
+              >
+                Explore Store
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
