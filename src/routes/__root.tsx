@@ -54,6 +54,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           type: 'image/svg+xml',
           href: '/favicon.svg',
         },
+        {
+          rel: 'apple-touch-icon',
+          href: '/favicon.svg',
+        },
       ],
     }),
 
