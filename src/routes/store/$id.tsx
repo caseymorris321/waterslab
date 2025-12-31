@@ -217,22 +217,22 @@ function RouteComponent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white pt-24">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white dark:from-navy-950 dark:to-navy-900 pt-24">
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Back Link */}
         <Link
           to="/store"
-          className="inline-flex items-center gap-2 text-sm font-medium text-ocean-600 hover:text-ocean-700 mb-6"
+          className="inline-flex items-center gap-2 text-sm font-medium text-ocean-600 hover:text-ocean-700 dark:text-ocean-400 dark:hover:text-ocean-300 mb-6"
         >
           <ArrowLeftIcon size={16} />
           Back to Store
         </Link>
 
         {/* Product Detail Card */}
-        <Card className="bg-white border-slate-100 shadow-lg overflow-hidden">
+        <Card className="bg-white dark:bg-navy-800 border-slate-100 dark:border-sky-400/10 shadow-lg overflow-hidden">
           <div className="grid gap-8 md:grid-cols-2 p-6 md:p-8">
             {/* Product Image */}
-            <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-sky-50 to-slate-100 border border-slate-100">
+            <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-sky-50 to-slate-100 dark:from-navy-700 dark:to-navy-600 border border-slate-100 dark:border-sky-400/10">
               <img
                 src={product.image}
                 alt={product.name}
@@ -429,28 +429,28 @@ function RouteComponent() {
                   )}
                 </div>
                 <CardTitle>
-                  <h1 className="text-3xl font-bold text-navy-900">
+                  <h1 className="text-3xl font-bold text-navy-900 dark:text-sky-100">
                     {product.name}
                   </h1>
                 </CardTitle>
               </CardHeader>
 
               <CardContent className="p-0 flex-1 space-y-6">
-                <CardDescription className="text-lg text-slate-600">
+                <CardDescription className="text-lg text-slate-600 dark:text-sky-200">
                   {product.description}
                 </CardDescription>
 
                 <div className="flex items-baseline gap-4">
-                  <span className="text-4xl font-bold text-navy-900">
+                  <span className="text-4xl font-bold text-navy-900 dark:text-sky-100">
                     ${product.price}
                   </span>
-                  <span className="text-slate-500">
+                  <span className="text-slate-500 dark:text-sky-300">
                     {product.rating.toString()}/5 ({product.reviews} reviews)
                   </span>
                 </div>
 
-                <div className="flex items-center gap-3 rounded-xl bg-sky-50 border border-sky-100 p-4 text-sm font-medium text-navy-800">
-                  <SparklesIcon size={18} className="text-ocean-500" />
+                <div className="flex items-center gap-3 rounded-xl bg-sky-50 dark:bg-navy-700 border border-sky-100 dark:border-sky-400/10 p-4 text-sm font-medium text-navy-800 dark:text-sky-100">
+                  <SparklesIcon size={18} className="text-ocean-500 dark:text-ocean-400" />
                   {product.inventory === 'in-stock'
                     ? 'Ships in 1-2 business days'
                     : product.inventory === 'backorder'
@@ -519,7 +519,7 @@ function RouteComponent() {
           <Suspense
             fallback={
               <div>
-                <h2 className="text-2xl font-bold text-navy-900 mb-6">
+                <h2 className="text-2xl font-bold text-navy-900 dark:text-sky-100 mb-6">
                   Recommended Products
                 </h2>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
