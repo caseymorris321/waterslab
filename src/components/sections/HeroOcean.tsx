@@ -68,11 +68,11 @@ export function HeroOcean() {
     skyUniforms['mieCoefficient'].value = 0.005
     skyUniforms['mieDirectionalG'].value = 0.8
 
-    // Move sun left on mobile
+    // Move sun slightly left on mobile
     const isMobile = container.clientWidth < 768
     const parameters = {
       elevation: 3,
-      azimuth: isMobile ? 140 : 180,
+      azimuth: isMobile ? 170 : 180,
     }
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer)
