@@ -33,7 +33,7 @@ export function HeroOcean() {
       1,
       20000
     )
-    camera.position.set(isMobile ? 0 : 30, 30, 100)
+    camera.position.set(0, 30, 100)
 
     // Sun
     const sun = new THREE.Vector3()
@@ -70,8 +70,8 @@ export function HeroOcean() {
     skyUniforms['mieDirectionalG'].value = 0.8
 
     const parameters = {
-      elevation: 3,
-      azimuth: isMobile ? 163 : 180,
+      elevation: 1,
+      azimuth: 180,
     }
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer)
@@ -98,8 +98,8 @@ export function HeroOcean() {
 
     updateSun()
 
-    // Simple camera look
-    camera.lookAt(0, 10, 0)
+    // Simple camera look - straight ahead
+    camera.lookAt(0, 10, -100)
 
     // Animation with visibility optimization
     let animationId: number

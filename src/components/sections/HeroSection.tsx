@@ -27,7 +27,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/70 via-transparent to-[#0A1628]/20 pointer-events-none" />
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center -mt-12 md:mt-0 pointer-events-none">
         <div className="max-w-4xl mx-auto px-4 text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 pointer-events-auto shadow-lg shadow-black/20">
