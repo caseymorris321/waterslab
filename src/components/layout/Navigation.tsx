@@ -158,7 +158,7 @@ export function Navigation() {
         </div>
 
         {/* Mobile - Menu Button + Theme Toggle (Left) */}
-        <div className="flex md:hidden items-center gap-1">
+        <div className="flex md:hidden items-center gap-0.5 w-20">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-lg hover:bg-sky-50 dark:hover:bg-navy-800 transition-colors cursor-pointer"
@@ -174,26 +174,28 @@ export function Navigation() {
         </div>
 
         {/* Mobile - Cart (Right) */}
-        <Link
-          to="/cart"
-          className={cn(
-            'flex md:hidden items-center gap-1',
-            'px-3 py-2 rounded-full',
-            'bg-ocean-500 text-white',
-            'text-sm font-semibold',
-          )}
-        >
-          <ShoppingBag size={16} />
-          <span
+        <div className="flex md:hidden w-20 justify-end">
+          <Link
+            to="/cart"
             className={cn(
-              'flex h-5 min-w-5 items-center justify-center',
-              'rounded-full bg-white text-ocean-600',
-              'text-xs font-bold px-1.5',
+              'flex items-center gap-1',
+              'px-3 py-2 rounded-full',
+              'bg-ocean-500 text-white',
+              'text-sm font-semibold',
             )}
           >
-            {cartItemsData?.count ?? 0}
-          </span>
-        </Link>
+            <ShoppingBag size={16} />
+            <span
+              className={cn(
+                'flex h-5 min-w-5 items-center justify-center',
+                'rounded-full bg-white text-ocean-600',
+                'text-xs font-bold px-1.5',
+              )}
+            >
+              {cartItemsData?.count ?? 0}
+            </span>
+          </Link>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
