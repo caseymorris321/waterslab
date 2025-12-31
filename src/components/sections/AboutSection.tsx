@@ -17,9 +17,12 @@ export function AboutSection() {
           {/* Image */}
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-sky-100 to-ocean-100">
-              {/* Placeholder - replace with actual image */}
               <div className="w-full h-full flex items-center justify-center">
-                <div className="w-3/4 h-3/4 rounded-full bg-gradient-to-br from-ocean-400 to-sky-300 opacity-50" />
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1746192629906-7298725e8600?w=800&auto=format&fit=crop&q=80"
+                  alt="Athletic man staying hydrated during workout"
+                  className="w-[98%] h-[98%] rounded-full object-cover"
+                />
               </div>
             </div>
             {/* Decorative element */}

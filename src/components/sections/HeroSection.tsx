@@ -30,7 +30,7 @@ export function HeroSection() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="max-w-4xl mx-auto px-4 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 pointer-events-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 pointer-events-auto shadow-lg shadow-black/20">
             <Droplets size={16} className="text-sky-300" />
             <span className="text-sm font-medium text-white/90">
               Premium Hydration Products
