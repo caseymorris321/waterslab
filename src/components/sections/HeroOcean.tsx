@@ -98,8 +98,8 @@ export function HeroOcean() {
 
     updateSun()
 
-    // Camera looks at horizon (y=0) so sun is centered vertically
-    camera.lookAt(0, 0, -100)
+    // Camera looks down to push sun up on screen (above text container)
+    camera.lookAt(0, -12, -100)
 
     // Animation with visibility optimization
     let animationId: number
