@@ -151,7 +151,7 @@ function CartPage() {
   }
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white dark:from-navy-950 dark:to-navy-900 pt-24 pb-12 px-4">
+      <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white dark:text-sky-100 pt-24 pb-12 px-4">
         <div className="max-w-5xl mx-auto">
           {/* Page Header */}
           <div className="text-center mb-8">
