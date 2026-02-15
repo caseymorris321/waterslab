@@ -10,7 +10,7 @@ export function RecommendedProducts({
   const recommendedProductsData = use(recommendedProducts)
   return (
     <div>
-      <h2 className="text-2xl font-bold text-navy-900 mb-6">
+      <h2 className="text-2xl font-bold text-navy-900 dark:text-sky-100 mb-6">
         Recommended Products
       </h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
